@@ -1,0 +1,21 @@
+[project]
+name = "auto-asset"
+version = "0.1.0"
+description = ""
+authors = [
+    {name = "socar-sio",email = "sio@socar.kr"}
+]
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = [
+    "selenium (>=4.30.0,<5.0.0)",
+    "pyotp (>=2.9.0,<3.0.0)"
+]
+
+[tool.poetry]
+packages = [{include = "auto_asset", from = "src"}]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
