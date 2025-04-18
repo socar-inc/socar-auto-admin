@@ -3,7 +3,7 @@ import pyotp
 from selenium.webdriver.common.by import By
 from selenium.webdriver.remote.webdriver import WebDriver
 
-from src.auto_asset.utils.wait_utils import wait_for_element
+from utils.wait_utils import wait_for_element
 
 
 class LoginPage:
