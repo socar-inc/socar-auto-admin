@@ -5,13 +5,13 @@ from utils.automation import run_selenium_automation
 @accident_blueprint.route("/registration", methods=["GET", "POST"])
 def registration():
     if request.method == "POST":
-        email = request.form["email"]
+        id = request.form["id"]
         password = request.form["password"]
         secret = request.form["secret"]
         reservation_id = request.form["reservation_id"]
 
         try:
-            accident_id = run_selenium_automation(email, password, secret, reservation_id)
+            accident_id = run_selenium_automation(id, password, secret, reservation_id)
             print(f"자동화 완료! 사고 ID: {accident_id}")
         except Exception as e:
             print(f"자동화 중 오류 발생: {str(e)}")

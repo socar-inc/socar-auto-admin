@@ -4,7 +4,7 @@ from socar_auto_admin.accident.pages.accident_page import AccidentPage
 from socar_auto_admin.accident.pages.login_page import LoginPage
 
 
-def run_selenium_automation(email, password, secret, reservation_id):
+def run_selenium_automation(id, password, secret, reservation_id):
     # WebDriver 실행
     driver = webdriver.Chrome()
     driver.get("https://accident.socar.me/")
@@ -12,7 +12,7 @@ def run_selenium_automation(email, password, secret, reservation_id):
 
     # 로그인 수행
     login_page = LoginPage(driver)
-    login_page.login(email, password, secret)
+    login_page.login(id, password, secret)
     print(f"[LOG] Keycloak 로그인 성공!")
 
     # 사고 등록 페이지 조작
